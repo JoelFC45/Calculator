@@ -11,7 +11,7 @@
       "value": "#ffffff"
     },
     "shape": {
-      "type": "circle"
+      "type": ["circle", "star", "edge"]
     },
     "opacity": {
       "value": 0.5,

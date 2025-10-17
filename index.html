@@ -10,12 +10,12 @@
 <body>
     <div id = "particles-container"></div>
         <div class="calculadora">
-            <input type="text" class="input" id = "display"></input>
+            <input type="text" class="input" id = "display" readonly></input>
 
-            <button class = "ac" onclick= "teste()">AC</button>
+            <button class = "ac" onclick= "eraseAll()">AC</button>
             <button class="plusMinus operation"  onclick="teste">+/-</button>
             <button class="bar operation" onclick="teste">/</button>
-            <button class="erase" onclick="teste">Erase</button>
+            <button class="erase" onclick="erase()">Erase</button>
            
             <button class="seven number" onclick="addNumber(7)">7</button>
             <button class="eight number" onclick="addNumber(8)">8</button>
@@ -33,8 +33,8 @@
             <button class="plus operation" onclick="teste">+</button>
 
             <button class="zero number" onclick="addNumber(0)">0</button>
-            <button class="dot" onclick="teste">.</button>
-            <button class="equals" onclick="teste">=</button>
+            <button class="dot" onclick="doting()">.</button>
+            <button class="equals" onclick=>=</button>
     </div>        
         </div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
