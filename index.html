@@ -10,30 +10,36 @@
 <body>
     <div id = "particles-container"></div>
         <div class="calculadora">
-            <input type="text" class="input">
-            <button class = "ac operation" >AC</button>
-            <button class="plusMinus operation">+/-</button>
-            <button class="bar operation">/</button>
-            <button class="erase operation">Erase</button>
-            <button class="seven">7</button>
-            <button class="eight ">8</button>
-            <button class="nine ">9</button>
-            <button class="multiply operation">X</button>
-            <button class="four ">4</button>
-            <button class="five ">5</button>
-            <button class="six ">6</button>
-            <button class="minus operation">-</button>
-            <button class="one ">1</button>
-            <button class="two ">2</button>
-            <button class="three ">3</button>
-            <button class="plus operation">+</button>
-            <button class="zero">0</button>
-            <button class="dot operation">.</button>
-            <button class="equals">=</button>
+            <input type="text" class="input" id = "display"></input>
+
+            <button class = "ac" onclick= "teste()">AC</button>
+            <button class="plusMinus operation"  onclick="teste">+/-</button>
+            <button class="bar operation" onclick="teste">/</button>
+            <button class="erase" onclick="teste">Erase</button>
+           
+            <button class="seven number" onclick="addNumber(7)">7</button>
+            <button class="eight number" onclick="addNumber(8)">8</button>
+            <button class="nine number" onclick="addNumber(9)">9</button>
+            <button class="multiply operation" onclick="teste">X</button>
+
+            <button class="four number" onclick="addNumber(4)">4</button>
+            <button class="five number" onclick="addNumber(5)">5</button>
+            <button class="six number" onclick="addNumber(6)">6</button>
+            <button class="minus operation" onclick="teste">-</button>
+
+            <button class="one number" onclick="addNumber(1)">1</button>
+            <button class="two number" onclick="addNumber(2)">2</button>
+            <button class="three number" onclick="addNumber(3)">3</button>
+            <button class="plus operation" onclick="teste">+</button>
+
+            <button class="zero number" onclick="addNumber(0)">0</button>
+            <button class="dot" onclick="teste">.</button>
+            <button class="equals" onclick="teste">=</button>
     </div>        
         </div>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="app.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
