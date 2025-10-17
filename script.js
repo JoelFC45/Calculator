@@ -1,6 +1,5 @@
 function addNumber(number) {
     document.querySelector('#display').value += number;
-    console.log(number);
 }
 function erase() {
    let tela = document.querySelector('#display').value;
@@ -11,4 +10,8 @@ function eraseAll(){
 }
 function doting(){
     document.querySelector('#display').value += ".";
+}
+function transform(){
+    let operador = document.querySelector('#display').value;
+    parseFloat(operador); 
 }
