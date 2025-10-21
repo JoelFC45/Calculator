@@ -1,21 +1,32 @@
-function addNumber(number) {
-  document.querySelector("#display").value += number;
-}
+const display = document.querySelector("#display");
+
 var num1 = null;
 var num2 = null;
 var operator = null;
+
+function addNumber(number) {
+  display.value += number;
+}
+
 function erase() {
-  let tela = document.querySelector("#display").value;
-  document.querySelector("#display").value = tela.slice(0, -1);
+  display.value = display.value.slice(0, -1);
 }
+
 function eraseAll() {
-  document.querySelector("#display").value = "";
+  display.value = "";
+  num1 = null;
+  num2 = null;
+  operator = null;
 }
+
 function doting() {
-  if (document.querySelector("#display").value == null) {
-    document.querySelector("#display").value = "0.";
+  if (display.value.includes('.')) {
+    return;
+  }
+  if (display.value === "") {
+    display.value = "0.";
   } else {
-    document.querySelector("#display").value += ".";
+    display.value += ".";
   }
 }
 
@@ -28,27 +39,55 @@ function transform(num) {
     return num2;
   }
 }
+
 function chooseOperator(op) {
-  let num = document.querySelector("#display").value;
-  transform(num);
-  document.querySelector("#display").value = "";
+  if (display.value === "") {
+    return;
+  }
+  
+  if (num1 !== null) {
+      calculate();
+  }
+
+  transform(display.value);
+  
   operator = op;
-  return operator;
+  display.value = "";
 }
 
 function calculate() {
+  if (operator === null || num1 === null) {
+      return;
+  }
+    
+  transform(display.value);
+  
+  if (num2 === null) {
+      return;
+  }
+
+  let resultado;
   switch (operator) {
     case "+":
-      document.querySelector("#display").value = num1 + num2;
+      resultado = num1 + num2;
       break;
     case "-":
-      document.querySelector("#display").value = num1 - num2;
+      resultado = num1 - num2;
       break;
-    case "*":
-      document.querySelector("#display").value = num1 * num2;
+    case "X":
+      resultado = num1 * num2;
       break;
     case "/":
-      document.querySelector("#display").value = num1 / num2;
+      if (num2 === 0) {
+        resultado = "Erro!";
+      } else {
+        resultado = num1 / num2;
+      }
       break;
   }
+  
+  display.value = resultado;
+  num1 = resultado;
+  num2 = null;
+  operator = null;
 }
