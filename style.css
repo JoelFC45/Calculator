@@ -3,7 +3,11 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   margin: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 #particles-container {
   position: fixed;
   width: 100%;
